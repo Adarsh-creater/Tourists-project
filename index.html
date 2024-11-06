@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh_Library</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .card {
+            
+            position: absolute; 
+            top: 10px; 
+            right: 10px;
+            
+          
+            /* width: 200px; */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        .range {
+            padding: 8px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+    <div class="card">
+        <div class="range" style="background-color: rgb(153, 0, 0);">
+            > 1,000,000
+        </div>
+        <div class="range" style="background-color: rgb(204, 0, 0);">
+            > 750,000
+        </div>
+        <div class="range" style="background-color: rgb(255, 0, 0);">
+            > 500,000
+        </div>
+        <div class="range" style="background-color: rgb(255, 51, 51);">
+            > 250,000
+        </div>
+        <div class="range" style="background-color: rgb(255, 102, 102);">
+            ≤ 250,000
+        </div>
+    </div>
+    <div id='map'></div>
+</body>
+<script src='https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWRhcnNoa3VtYXIwMDMiLCJhIjoiY20xaG03MnljMGNyODJqczIxbDZiMWs5dyJ9.pwCBRaIUbWRK9W7boDtm_A';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        center: [0, 20],
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 1
+    });
+</script>
+<script src="index.js"></script>
+
+</html>
